@@ -96,91 +96,91 @@
 				})();
 
 	// Smooth scroll.
-		$('.smooth-scroll').scrolly();
-		$('.smooth-scroll-middle').scrolly({ anchor: 'middle' });
+		// $('.smooth-scroll').scrolly();
+		// $('.smooth-scroll-middle').scrolly({ anchor: 'middle' });
 
-	// Wrapper.
-		$wrapper.children()
-			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				initialize:	function() {
-					$(this).addClass('is-inactive');
-				},
-				terminate:	function() {
-					$(this).removeClass('is-inactive');
-				},
-				enter:		function() {
-					$(this).removeClass('is-inactive');
-				},
-				leave:		function() {
+	// // Wrapper.
+	// 	$wrapper.children()
+	// 		.scrollex({
+	// 			top:		'30vh',
+	// 			bottom:		'30vh',
+	// 			initialize:	function() {
+	// 				$(this).addClass('is-inactive');
+	// 			},
+	// 			terminate:	function() {
+	// 				$(this).removeClass('is-inactive');
+	// 			},
+	// 			enter:		function() {
+	// 				$(this).removeClass('is-inactive');
+	// 			},
+	// 			leave:		function() {
 
-					var $this = $(this);
+	// 				var $this = $(this);
 
-					if ($this.hasClass('onscroll-bidirectional'))
-						$this.addClass('is-inactive');
+	// 				if ($this.hasClass('onscroll-bidirectional'))
+	// 					$this.addClass('is-inactive');
 
-				}
-			});
+	// 			}
+	// 		});
 
-	// Items.
-		$('.items')
-			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				delay:		50,
-				initialize:	function() {
-					$(this).addClass('is-inactive');
-				},
-				terminate:	function() {
-					$(this).removeClass('is-inactive');
-				},
-				enter:		function() {
-					$(this).removeClass('is-inactive');
-				},
-				leave:		function() {
+	// // Items.
+	// 	$('.items')
+	// 		.scrollex({
+	// 			top:		'30vh',
+	// 			bottom:		'30vh',
+	// 			delay:		50,
+	// 			initialize:	function() {
+	// 				$(this).addClass('is-inactive');
+	// 			},
+	// 			terminate:	function() {
+	// 				$(this).removeClass('is-inactive');
+	// 			},
+	// 			enter:		function() {
+	// 				$(this).removeClass('is-inactive');
+	// 			},
+	// 			leave:		function() {
 
-					var $this = $(this);
+	// 				var $this = $(this);
 
-					if ($this.hasClass('onscroll-bidirectional'))
-						$this.addClass('is-inactive');
+	// 				if ($this.hasClass('onscroll-bidirectional'))
+	// 					$this.addClass('is-inactive');
 
-				}
-			})
-			.children()
-				.wrapInner('<div class="inner"></div>');
+	// 			}
+	// 		})
+	// 		.children()
+	// 			.wrapInner('<div class="inner"></div>');
 
-	// Gallery.
-		$('.gallery')
-			.wrapInner('<div class="inner"></div>')
-			.prepend(browser.mobile ? '' : '<div class="forward"></div><div class="backward"></div>')
-			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				delay:		50,
-				initialize:	function() {
-					$(this).addClass('is-inactive');
-				},
-				terminate:	function() {
-					$(this).removeClass('is-inactive');
-				},
-				enter:		function() {
-					$(this).removeClass('is-inactive');
-				},
-				leave:		function() {
+	// // Gallery.
+	// 	$('.gallery')
+	// 		.wrapInner('<div class="inner"></div>')
+	// 		.prepend(browser.mobile ? '' : '<div class="forward"></div><div class="backward"></div>')
+	// 		.scrollex({
+	// 			top:		'30vh',
+	// 			bottom:		'30vh',
+	// 			delay:		50,
+	// 			initialize:	function() {
+	// 				$(this).addClass('is-inactive');
+	// 			},
+	// 			terminate:	function() {
+	// 				$(this).removeClass('is-inactive');
+	// 			},
+	// 			enter:		function() {
+	// 				$(this).removeClass('is-inactive');
+	// 			},
+	// 			leave:		function() {
 
-					var $this = $(this);
+	// 				var $this = $(this);
 
-					if ($this.hasClass('onscroll-bidirectional'))
-						$this.addClass('is-inactive');
+	// 				if ($this.hasClass('onscroll-bidirectional'))
+	// 					$this.addClass('is-inactive');
 
-				}
-			})
-			.children('.inner')
-				//.css('overflow', 'hidden')
-				.css('overflow-y', browser.mobile ? 'visible' : 'hidden')
-				.css('overflow-x', browser.mobile ? 'scroll' : 'hidden')
-				.scrollLeft(0);
+	// 			}
+	// 		})
+	// 		.children('.inner')
+	// 			//.css('overflow', 'hidden')
+	// 			.css('overflow-y', browser.mobile ? 'visible' : 'hidden')
+	// 			.css('overflow-x', browser.mobile ? 'scroll' : 'hidden')
+	// 			.scrollLeft(0);
 
 		// Style #1.
 			// ...
