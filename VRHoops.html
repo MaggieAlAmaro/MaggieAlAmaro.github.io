@@ -5,147 +5,164 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Generic - Phantom by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets2/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets2/css/noscript.css" /></noscript>
-	</head>
-	<body>
-		<!-- Header -->
-		<header id="header" >
-			<h1><a href="index.html">Margarida Amaro</a></h1>
-			<nav class="links">
-				<!-- <ul>
-					<li><a href="#aboutme">About Me</a></li> 
-					<li><a href="#portfolio">Portfolio</a></li>
-				</ul> -->
-			</nav>
-		</header>
-		<!-- Wrapper -->
-			<div>
+
+<head>
+	<title>Margarida Amaro</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets2/css/main.css" />
+	<link rel="stylesheet" href="assets2/css/banner.css" />
+	<link rel="stylesheet" href="assets2/css/wrapper.css" />
+	<link rel="stylesheet" href="assets2/css/icon.css" />
+	<link rel="stylesheet" href="assets2/css/elements/button.css" />
+	<link rel="stylesheet" href="assets2/css/elements/header.css" />
+	<!-- <noscript><link rel="stylesheet" href="assets2/css/noscript.css" /></noscript> -->
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<header id="header">
+		<h1><a href="index.html">Margarida Amaro</a></h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="https://www.linkedin.com/in/margarida-al-amaro/"
+						class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a>
+				</li>
+				<li>
+					<a href="https://maggie-amaro.itch.io/" class="icon brands style2 fa-itch-io"><span
+							class="label">Itch.io</span></a>
+				</li>
+				<li>
+					<a href="https://github.com/maggieNeedsZzz" class="icon brands style2 fa-github"><span
+							class="label">Github</span></a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Wrapper -->
+	<div id="blogpost">
 
 
-				<section >
-					<div class="banner-image-container"  >
-						<img src="images/vrhoops.jpg" alt="" class="banner-image" />
-					</div>
-				</section >
-		
-
-
-				<section  class="banner style3 " style="background-color: #dfdfdf; padding: 2rem; margin-bottom: -3rem;">
-					<div class="content"  class="inner">
-								<h3 style="display:inline; color:lightslategray">VR Hoops</h3><p style="display:inline"> 
-								was a 2 people project for my course on virtual reality. This project was developed in <b>Unity</b>
-								 and made use of the <b>Unity XR Interaction Toolkit</b>. 
-								 <br>
-								 The objective of the project was to be inspired by and improve upon
-								  an existing technology linked to VR. 
-									The theme assigned to us was a paper called 
-									<a href="https://ieeexplore.ieee.org/document/7892280">Catching a Real Ball in Virtual Reality</a>, where a user 
-									is able to catch a real ball inside a VR environment.
-									We improved upon this technology by adding motion sensory feedback throughout the ball's trajectory, 
-									and turned the calculation of the trajectory into a strategic element in a multiplayer basketball simulation game,
-									 where the players are placed in an obstacle course and must cooperate in order to reach the hoop and dunk the ball as fast as possible.
-									 <br>
-									 To incentivize cooperation the two players were restricted to different parts of the level, and were given some mechanics
-									 to facilitate communication like pin-pointing locations with the controller pointer, see-through walls, and a
-									 top-down map of the level.
-									We also ended up adding some other features such as resizing the ball, rotating the hoop and customizing the appearance of 
-									the ball and the player's hands.
-									<br>
-									<br>
-								</p>
-								<ul class="actions ">
-									<li><a href="https://www.youtube.com/watch?v=Ygau0zHcdkg&ab_channel=MaggieAmaro" class="button style1">Video Demonstration</a></li>
-								</ul>
-
-							<p>
-							I wish I had had more time to refine this product but my access to the HDMs was limited to the duration of the course. It was a great experience
-							and I hope to develop more games in VR in the future.<br>The features I worked on include:</p>
-					</div>
-				</section> 
-
-				<section  class="banner style3 " style="background-color: #dfdfdf; padding: 2rem; margin-bottom: -3rem;">
-					<div class="content" class="inner">
-						<h2>Multiplayer</h2>
-						<p>
-							The multiplayer functionality was implemented using <b>Photon</b> and the Unity <b>Photon Pun 2</b> package. Photon allows for the creation
-							 of a server to host the game and the corresponding Unity package contains functions for controlling the multiplayer objects and 
-							 environment. Using this package I first coded the connection of the players into the server, then made sure every relevant object 
-							 had a <i>photonView</i> component to identify it across the network. With this component I was able to spawn the players on the server. 
-							 After making sure each player was controlling separate characters, I worked on having objects' properties (i.e. the player's position)
-							  sync over the network, using the <i>PhotonTransformView</i> component.
-							  Finally, <i>Pun</i> Remote procedure calls (PunRPC) were used for some functionality like setting the haptic feedback intensity of 
-							  the other player's controller based on his distance to the ball.
-						</p>
-					</div>
-				</section> 
-
-				<section  class="banner style3 " style="background-color: #dfdfdf; padding: 2rem; margin-bottom: -3rem;">
-					<div class="content" class="inner">
-						<h2>Ball Trajectory Prediction</h2>
-						<p>
-							I was in charge of creating a way for the players to visualize the predicted trajectory of the ball when they performed a "throw simulation".
-							The simulated throw followed the same pattern as a normal throw (where a player holds down the grip button, performs a throwing motion and releases the grip button) but 
-							in the simulated throw the player had to hold down the <u>grip</u> button during the entire motion and use the <u>trigger</u> button in the 
-							same hold, perform motion and release pattern as in a normal throw. This action then triggered the Trajectory Prediction mechanic which consisted of 
-							using the position and velocity vector values recorded by the controller to solve for the time of flight of a projectile (using
-							Kinematic Equations).
-							The time of flight then allowed for the placement of several points along the trajectory path, which were also calculated with 
-							kinematic equations, and finally a line renderer was used to draw a line between those points.
-						</p>
-					</div>
-				</section> 
-				
-				<section  class="banner style3 " style="background-color: #dfdfdf; padding: 2rem; margin-bottom: -3rem;">
-					<div class="content"  class="inner">
-						<h2>Teleportation Movement</h2>
-						<p>
-							The teleportation locomotion was implemented by me using the XR Toolkit teleportation components.
-						</p>
-					</div>
-				</section> 
-
-				<section  class="banner style3 " style="background-color: #dfdfdf; padding: 2rem;">
-					<div class="content"  class="inner">
-						<h2>Aesthetic elements</h2>
-						<p>
-							I also programmed some other aesthetic elements, like the pin signal and the ability to change
-							the ball and the hand's material.
-						</p>
-					</div>
-				</section> 
-
-
-				
-				
-			<div>
-				<!-- Footer -->
-				<footer class="align-center">
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/margarida-al-amaro/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://maggie-amaro.itch.io/" class="icon brands style2 fa-itch-io"><span class="label">Itch.io</span></a></li>
-							<li><a href="https://github.com/MaggieAlAmaro" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
-							<!--<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>-->
-						</ul>
-						<p>&copy; Margarida Amaro. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					<!-- </div> -->
-				</footer>
+		<section>
+			<div class="banner-image-container">
+				<img src="images/vrhoops.jpg" alt="" class="banner-image" />
 			</div>
-				
-				
-		<!-- Scripts -->
-			<script src="assets2/js/jquery.min.js"></script>
-			<script src="assets2/js/browser.min.js"></script>
-			<script src="assets2/js/breakpoints.min.js"></script>
-			<script src="assets2/js/util.js"></script>
-			<script src="assets2/js/main.js"></script>
+		</section>
 
-	</body>
+
+
+		<section class="banner style3 " style="background-color: #dfdfdf; padding: 2rem; margin-bottom: -3rem;">
+			<div class="content" class="inner">
+				<h3 style="display:inline; color:lightslategray">VR Hoops</h3>
+				<p style="display:inline">
+					was a 2 people project for my course on virtual reality. This project was developed in <b>Unity</b>
+					and made use of the <b>Unity XR Interaction Toolkit</b>.
+					<br>
+					The objective of the project was to be inspired by and improve upon
+					an existing technology linked to VR.
+					The theme assigned to us was a paper called
+					<a href="https://ieeexplore.ieee.org/document/7892280">Catching a Real Ball in Virtual Reality</a>,
+					where a user
+					is able to catch a real ball inside a VR environment.
+					We improved upon this technology by adding motion sensory feedback throughout the ball's trajectory,
+					and turned the calculation of the trajectory into a strategic element in a multiplayer basketball
+					simulation game,
+					where the players are placed in an obstacle course and must cooperate in order to reach the hoop and
+					dunk the ball as fast as possible.
+					<br>
+					To incentivize cooperation the two players were restricted to different parts of the level, and were
+					given some mechanics
+					to facilitate communication like pin-pointing locations with the controller pointer, see-through
+					walls, and a
+					top-down map of the level.
+					We also ended up adding some other features such as resizing the ball, rotating the hoop and
+					customizing the appearance of
+					the ball and the player's hands.
+					<br>
+				</p>
+				<a style="margin: 0.8rem 0" href="https://www.youtube.com/watch?v=Ygau0zHcdkg&ab_channel=MaggieAmaro"
+					class="button style1">Video Demonstration</a>
+
+				<p>
+					I wish I had had more time to refine this product but my access to the HDMs was limited to the
+					duration of the course. It was a great experience
+					and I hope to develop more games in VR in the future.
+					<br>
+					The features I worked on include:
+				</p>
+
+
+				<h2 style="padding-top: 2rem;">Multiplayer</h2>
+				<p>
+					The multiplayer functionality was implemented using <b>Photon</b> and the Unity <b>Photon Pun 2</b>
+					package. Photon allows for the creation
+					of a server to host the game and the corresponding Unity package contains functions for controlling
+					the multiplayer objects and
+					environment. Using this package I first coded the connection of the players into the server, then
+					made sure every relevant object
+					had a <i>photonView</i> component to identify it across the network. With this component I was able
+					to spawn the players on the server.
+					After making sure each player was controlling separate characters, I worked on having objects'
+					properties (i.e. the player's position)
+					sync over the network, using the <i>PhotonTransformView</i> component.
+					Finally, <i>Pun</i> Remote procedure calls (PunRPC) were used for some functionality like setting
+					the haptic feedback intensity of
+					the other player's controller based on his distance to the ball.
+				</p>
+
+				<h2 style="padding-top: 2rem;">Ball Trajectory Prediction</h2>
+				<p>
+					I was in charge of creating a way for the players to visualize the predicted trajectory of the ball
+					when they performed a "throw simulation".
+					The simulated throw followed the same pattern as a normal throw (where a player holds down the grip
+					button, performs a throwing motion and releases the grip button) but
+					in the simulated throw the player had to hold down the <u>grip</u> button during the entire motion
+					and use the <u>trigger</u> button in the
+					same hold, perform motion and release pattern as in a normal throw. This action then triggered the
+					Trajectory Prediction mechanic which consisted of
+					using the position and velocity vector values recorded by the controller to solve for the time of
+					flight of a projectile (using
+					Kinematic Equations).
+					The time of flight then allowed for the placement of several points along the trajectory path, which
+					were also calculated with
+					kinematic equations, and finally a line renderer was used to draw a line between those points.
+				</p>
+				<h2 style="padding-top: 2rem;">Teleportation Movement</h2>
+				<p>
+					The teleportation locomotion was implemented by me using the XR Toolkit teleportation components.
+				</p>
+
+				<h2 style="padding-top: 2rem;">Aesthetic elements</h2>
+				<p>
+					I also programmed some other aesthetic elements, like the pin signal and the ability to change
+					the ball and the hand's material.
+				</p>
+			</div>
+		</section>
+
+	</div>
+
+
+
+	<!-- Footer -->
+	<footer style="font-size: small">
+		<p>
+			&copy; Margarida Amaro. Design:
+			<a href="https://html5up.net" style="color: black">HTML5 UP</a>
+		</p>
+	</footer>
+
+
+
+	<!-- Scripts -->
+	<script src="assets2/js/jquery.min.js"></script>
+	<script src="assets2/js/browser.min.js"></script>
+	<script src="assets2/js/breakpoints.min.js"></script>
+	<script src="assets2/js/util.js"></script>
+	<script src="assets2/js/main.js"></script>
+
+</body>
+
 </html>
